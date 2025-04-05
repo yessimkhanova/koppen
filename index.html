@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Köppen Climate Maps – Kazakhstan & Global </title>
+  <title>Köppen Climate Maps – Kazakhstan & Global</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -17,11 +20,11 @@
       color: white;
       padding: 20px;
       text-align: center;
+      width: 100%;
     }
     .container {
       padding: 20px;
-      max-width: 1000px;
-      margin: auto;
+      width: 100%;
       background: white;
     }
     iframe {
@@ -34,12 +37,30 @@
       color: #0077cc;
       text-decoration: none;
     }
+    a:hover {
+      text-decoration: underline;
+    }
+    h2, h3 {
+      margin-top: 40px;
+    }
     footer {
       background: #1c1c1c;
       color: white;
       text-align: center;
       padding: 10px;
       font-size: 0.9em;
+      width: 100%;
+    }
+    .orcid-link img {
+      vertical-align: middle;
+      height: 16px;
+      margin-right: 5px;
+    }
+    .profile-img {
+      max-width: 200px;
+      border-radius: 10px;
+      display: block;
+      margin: 20px auto;
     }
   </style>
 </head>
@@ -47,15 +68,17 @@
 
 <header>
   <h1>Köppen Climate Maps</h1>
-  <p>Visualising Kazakhstan's CMIP6 Projections (GEE-based)</p>
+  <p>Kazakhstan’s and the World’s Köppen Climate Maps (CMIP6, CRU, ERA5 – GEE-based)</p>
 </header>
 
-<div class="container">
-  <h2>🌍 CMIP6 Ensemble Climate Maps</h2>
-  <iframe src="https://kalamkas.users.earthengine.app/view/koppen-climate-maps-cmip6-ensemble"></iframe>
+<img src="photo.jpg" alt="Kalamkas Yessimkhanova" class="profile-img">
 
-  <h2>🛰️ Main GEE Application</h2>
-  <iframe src="https://kalamkas.users.earthengine.app/"></iframe>
+<div class="container">
+
+  <h2>🧪 About the Project</h2>
+  <p>
+    This project is part of the doctoral research of Kalamkas Yessimkhanova, conducted under the supervision of Dr. Mátyás Gede at Eötvös Loránd University in Budapest. It leverages Google Earth Engine and a variety of climate datasets to generate Köppen Climate Classification maps. These maps classify the climate of Kazakhstan and the world based on long-term monthly averages of temperature and precipitation.
+  </p>
 
   <h2>📂 Source Code</h2>
   <p>
@@ -63,14 +86,49 @@
     <a href="https://github.com/yessimkhanova/koppen_maps" target="_blank">GitHub</a>.
   </p>
 
-  <h2>🧪 About the Project</h2>
+  <h2>🌐 Interactive Köppen Climate Maps Gallery</h2>
+
+  <h3>🧩 Combined View </h3>
+  <iframe src="https://kalamkas.users.earthengine.app/"></iframe>
+  
+  <h3>📈 CMIP6 Ensemble</h3>
+  <iframe src="https://kalamkas.users.earthengine.app/view/koppen-climate-maps-cmip6-ensemble"></iframe>
+
+  <h3>🌡️ ERA5-Land Historical Climate</h3>
+  <iframe src="https://kalamkas.users.earthengine.app/view/koppen-climate-maps-era5-land-data"></iframe>
+
+  <h3>🌧️ CRU Historical Climate</h3>
+  <iframe src="https://kalamkas.users.earthengine.app/view/koppen-climate-maps-cru-data"></iframe>
+
+  <h3>📊 Fusion Model 1</h3>
+  <iframe src="https://kalamkas.users.earthengine.app/view/koppen-climate-maps-fusion-model"></iframe>
+
+  <h3>🔥 Fusion Model 2</h3>
+  <iframe src="https://kalamkas.users.earthengine.app/view/koppen-climate-maps-fusion-model-2"></iframe>
+
+  <h2>📬 Contact</h2>
   <p>
-    This project is part of my doctoral research at Eötvös Loránd University. It uses Google Earth Engine and CMIP6 climate data to map the future Köppen climate classifications of Kazakhstan. The app provides interactive access to both historical baselines and projected changes under SSP2-4.5 and SSP5-8.5 scenarios.
+    For questions or collaboration opportunities, feel free to reach out at:  
+    <a href="mailto:kalamkasyessimkhanova@gmail.com">kalamkasyessimkhanova@gmail.com</a>
   </p>
+
+  <h2>📇 Researcher Profile</h2>
+  <p class="orcid-link">
+    <a href="https://orcid.org/0000-0003-2958-3927" target="_blank">
+      <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID iD">
+      https://orcid.org/0000-0003-2958-3927
+    </a>
+  </p>
+
 </div>
 
 <footer>
-  © 2025 Kalamkas Yessimkhanova | Built with GitHub Pages & Google Earth Engine
+  © 2025 Kalamkas Yessimkhanova |
+  <a href="https://orcid.org/0000-0003-2958-3927" target="_blank" style="color: #aadfff;">
+    <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID iD" style="vertical-align: middle; height: 14px;">
+    ORCID
+  </a>
+  | Built with GitHub Pages & Google Earth Engine
 </footer>
 
 </body>
