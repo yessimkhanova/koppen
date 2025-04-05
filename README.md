@@ -4,12 +4,12 @@ This repository hosts the code and resources behind the interactive Köppen Clim
 
 The project uses Google Earth Engine to visualise historical and projected climate data from multiple datasets (CMIP6, CRU, ERA5, Fusion models) over Kazakhstan and globally.
 
-# Website
+### Website
 
 Access the full interactive app gallery here:  
 👉 [Köppen Climate Maps – Kazakhstan & Global](https://yessimkhanova.github.io/koppen/)
 
-# Content
+### Content
 
 - GEE Gallery View  
 - CMIP6 Ensemble  
@@ -20,16 +20,16 @@ Access the full interactive app gallery here:
 
 Each of these is embedded in the main website above.
 
-# Contact
+### Contact
 
 For questions or collaboration:
 [kalamkasyessimkhanova@gmail.com](mailto:kalamkasyessimkhanova@gmail.com)
 
-# ORCID
+### ORCID
 
 [Kalamkas Yessimkhanova – ORCID Profile](https://orcid.org/0000-0003-2958-3927)
 
-# License
+### License
 
 This project is open for academic use. Please cite appropriately if using any maps or methods in your work.
 © 2024 by Kalamkas Yessimkhanova is licensed under CC BY-NC 4.0 
