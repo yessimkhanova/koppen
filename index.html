@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Köppen Climate Maps – Kazakhstan & Global</title>
   <style>
     * {
@@ -40,7 +40,8 @@
     a:hover {
       text-decoration: underline;
     }
-    h2, h3 {
+    h2,
+    h3 {
       margin-top: 40px;
       font-weight: bold;
     }
@@ -58,78 +59,112 @@
       margin-right: 5px;
     }
   </style>
+
+  <!-- Google Analytics 4 (Minimal, GDPR-compliant) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFKCNGFKJ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-TFKCNGFKJ0", {
+      anonymize_ip: true,
+      send_page_view: true,
+    });
+  </script>
 </head>
 <body>
+  <header>
+    <h1>Köppen Climate Maps</h1>
+    <p>Kazakhstan’s and the World’s Köppen Climate Maps (CMIP6, CRU, ERA5 – GEE-based)</p>
+  </header>
 
-<header>
-  <h1>Köppen Climate Maps</h1>
-  <p>Kazakhstan’s and the World’s Köppen Climate Maps (CMIP6, CRU, ERA5 – GEE-based)</p>
-</header>
+  <div class="container">
+    <h2><strong>About the Project</strong></h2>
+    <p>
+      This project is part of the doctoral research of Kalamkas Yessimkhanova, conducted under the supervision of Dr. Mátyás Gede at Eötvös Loránd University in Budapest.
+    </p>
+    <p>
+      It leverages Google Earth Engine and a variety of climate datasets to generate Köppen Climate Classification maps. These maps classify the climate of Kazakhstan and the world based on long-term monthly averages of temperature and precipitation.
+    </p>
 
-<div class="container">
+    <h2><strong>Source Code</strong></h2>
+    <p>
+      View the code and data processing pipeline on
+      <a href="https://github.com/yessimkhanova/koppen_maps" target="_blank">GitHub</a>.
+    </p>
 
-  <h2><strong> About the Project</h2>
-  <p>
-    This project is part of the doctoral research of Kalamkas Yessimkhanova, conducted under the supervision of Dr. Mátyás Gede at Eötvös Loránd University in Budapest.
-  </p>
-  <p>
-     It leverages Google Earth Engine and a variety of climate datasets to generate Köppen Climate Classification maps. These maps classify the climate of Kazakhstan and the world based on long-term monthly averages of temperature and precipitation.
-  </p>
-  <h2><strong> Source Code</h2>
-  <p>
-    View the code and data processing pipeline on 
-    <a href="https://github.com/yessimkhanova/koppen_maps" target="_blank">GitHub</a>.
-  </p>
+    <h2><strong>Interactive Köppen Climate Maps Gallery</strong></h2>
 
-  <h2><strong> Interactive Köppen Climate Maps Gallery</h2>
-  <iframe src="https://kalamkas.users.earthengine.app/"></iframe>
+    <iframe
+      src="https://kalamkas.users.earthengine.app/"
+      onload="gtag('event', 'iframe_load', { event_category: 'GEE App', event_label: 'Main Köppen Map' });"
+    ></iframe>
 
-  <h3><strong> CMIP6 Ensemble</strong></h3>
-  <iframe src="https://kalamkas.users.earthengine.app/view/koppen-climate-maps-cmip6-ensemble"></iframe>
+    <h3><strong>CMIP6 Ensemble</strong></h3>
+    <iframe
+      src="https://kalamkas.users.earthengine.app/view/koppen-climate-maps-cmip6-ensemble"
+      onload="gtag('event', 'iframe_load', { event_category: 'GEE App', event_label: 'CMIP6 Ensemble' });"
+    ></iframe>
 
-  <h3><strong> ERA5-Land Historical Climate</strong></h3>
-  <iframe src="https://kalamkas.users.earthengine.app/view/koppen-climate-maps-era5-land-data"></iframe>
+    <h3><strong>ERA5-Land Historical Climate</strong></h3>
+    <iframe
+      src="https://kalamkas.users.earthengine.app/view/koppen-climate-maps-era5-land-data"
+      onload="gtag('event', 'iframe_load', { event_category: 'GEE App', event_label: 'ERA5-Land Historical Climate' });"
+    ></iframe>
 
-  <h3><strong> CRU Historical Climate</strong></h3>
-  <iframe src="https://kalamkas.users.earthengine.app/view/koppen-climate-maps-cru-data"></iframe>
+    <h3><strong>CRU Historical Climate</strong></h3>
+    <iframe
+      src="https://kalamkas.users.earthengine.app/view/koppen-climate-maps-cru-data"
+      onload="gtag('event', 'iframe_load', { event_category: 'GEE App', event_label: 'CRU Historical Climate' });"
+    ></iframe>
 
-  <h3><strong> Fusion Model 1</strong></h3>
-  <iframe src="https://kalamkas.users.earthengine.app/view/koppen-climate-maps-fusion-model"></iframe>
+    <h3><strong>Fusion Model 1</strong></h3>
+    <iframe
+      src="https://kalamkas.users.earthengine.app/view/koppen-climate-maps-fusion-model"
+      onload="gtag('event', 'iframe_load', { event_category: 'GEE App', event_label: 'Fusion Model 1' });"
+    ></iframe>
 
-  <h3><strong> Fusion Model 2</strong></h3>
-  <iframe src="https://kalamkas.users.earthengine.app/view/koppen-climate-maps-fusion-model-2"></iframe>
+    <h3><strong>Fusion Model 2</strong></h3>
+    <iframe
+      src="https://kalamkas.users.earthengine.app/view/koppen-climate-maps-fusion-model-2"
+      onload="gtag('event', 'iframe_load', { event_category: 'GEE App', event_label: 'Fusion Model 2' });"
+    ></iframe>
 
-  
-  <h3><strong> Meotorological stations observation (long term)</strong></h3>
-  <iframe src="https://yessimkhanova.github.io/annual_meteo_statistics_KZ/"></iframe>
-  <p>
+    <h3><strong>Meteorological stations observation (long term)</strong></h3>
+    <iframe
+      src="https://yessimkhanova.github.io/annual_meteo_statistics_KZ/"
+      onload="gtag('event', 'iframe_load', { event_category: 'Other App', event_label: 'Meteorological Stations Observation' });"
+    ></iframe>
+
+    <p>
       View the code and graphs individually in this repository
       <a href="https://github.com/yessimkhanova/annual_meteo_statistics_KZ" target="_blank">GitHub repo</a>.
     </p>
 
-  <p>
-      View CMIP6 climate models evaluation used in this research 
+    <p>
+      View CMIP6 climate models evaluation used in this research
       <a href="https://github.com/yessimkhanova/cmip6_models_evaluation" target="_blank">GitHub repo</a>.
     </p>
-  
-  <h2><strong> Contact</strong></h2>
-  <p>
-    For questions or collaboration opportunities, feel free to reach out at:  
-    <a href="mailto:kalamkasyessimkhanova@gmail.com">kalamkasyessimkhanova@gmail.com</a>
-  </p>
 
-  <h2><strong> Researcher Profile</strong></h2>
-  <p class="orcid-link">
-    <a href="https://orcid.org/0000-0003-2958-3927" target="_blank">
-      <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID iD">
-      https://orcid.org/0000-0003-2958-3927
-    </a>
-  </p>
+    <h2><strong>Contact</strong></h2>
+    <p>
+      For questions or collaboration opportunities, feel free to reach out at:
+      <a href="mailto:kalamkasyessimkhanova@gmail.com">kalamkasyessimkhanova@gmail.com</a>
+    </p>
 
-</div>
+    <h2><strong>Researcher Profile</strong></h2>
+    <p class="orcid-link">
+      <a href="https://orcid.org/0000-0003-2958-3927" target="_blank">
+        <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID iD" />
+        https://orcid.org/0000-0003-2958-3927
+      </a>
+    </p>
+  </div>
 
-<footer>
-  © 2025 Kalamkas Yessimkhanova | Built with GitHub Pages & Google Earth Engine
-</footer>
+  <footer>
+    © 2025 Kalamkas Yessimkhanova | Built with GitHub Pages & Google Earth Engine
+  </footer>
 </body>
 </html>
